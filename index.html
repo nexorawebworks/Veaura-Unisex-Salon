@@ -1,0 +1,1240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>VEAURA Unisex Salon | Premium Hair & Beauty</title>
+
+<meta name="description"
+content="VEAURA Unisex Salon — premium hair, beauty and grooming services with appointment booking.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+rel="stylesheet">
+
+<style>
+
+:root{
+--bg:#0c0b0a;
+--panel:#151210;
+--panel2:#1b1713;
+--cream:#f5eadb;
+--muted:#b9aa99;
+--gold:#d8ae72;
+--line:rgba(245,234,219,.13);
+}
+
+*{
+box-sizing:border-box;
+margin:0;
+padding:0;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family:"DM Sans",sans-serif;
+background:var(--bg);
+color:var(--cream);
+overflow-x:hidden;
+}
+
+a{
+text-decoration:none;
+color:inherit;
+}
+
+.nav{
+position:fixed;
+inset:0 0 auto;
+z-index:50;
+padding:18px 6%;
+display:flex;
+align-items:center;
+justify-content:space-between;
+background:rgba(12,11,10,.86);
+backdrop-filter:blur(16px);
+border-bottom:1px solid var(--line);
+}
+
+.logo{
+font-family:"Playfair Display",serif;
+font-size:25px;
+letter-spacing:4px;
+}
+
+.logo span{
+color:var(--gold);
+}
+
+.navlinks{
+display:flex;
+gap:28px;
+color:var(--muted);
+font-size:13px;
+}
+
+.navlinks a:hover{
+color:var(--gold);
+}
+
+.btn{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+border:1px solid var(--gold);
+padding:13px 21px;
+border-radius:30px;
+font-size:13px;
+transition:.3s;
+}
+
+.btn:hover{
+background:var(--gold);
+color:#17110b;
+transform:translateY(-2px);
+}
+
+.hero{
+min-height:100vh;
+display:grid;
+align-items:center;
+position:relative;
+padding:145px 7% 90px;
+
+background:
+linear-gradient(90deg,rgba(12,11,10,.98),rgba(12,11,10,.52)),
+url("https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1800&q=85")
+center/cover;
+}
+
+.hero-inner{
+position:relative;
+z-index:2;
+max-width:850px;
+}
+
+.eyebrow,
+.kicker{
+color:var(--gold);
+letter-spacing:4px;
+text-transform:uppercase;
+font-size:11px;
+}
+
+.hero h1{
+font-family:"Playfair Display",serif;
+font-size:clamp(58px,9vw,115px);
+line-height:.9;
+font-weight:600;
+margin:20px 0;
+}
+
+.hero h1 em{
+color:var(--gold);
+font-style:normal;
+}
+
+.hero p{
+max-width:570px;
+color:var(--muted);
+line-height:1.8;
+margin:25px 0 30px;
+}
+
+.actions{
+display:flex;
+gap:12px;
+flex-wrap:wrap;
+}
+
+.scroll{
+position:absolute;
+bottom:28px;
+left:7%;
+color:var(--muted);
+font-size:10px;
+letter-spacing:3px;
+}
+
+section{
+padding:105px 7%;
+}
+
+.section-head{
+display:flex;
+justify-content:space-between;
+gap:30px;
+align-items:end;
+margin-bottom:48px;
+}
+
+.section-head h2{
+font-family:"Playfair Display",serif;
+font-size:clamp(42px,5vw,68px);
+font-weight:500;
+margin-top:9px;
+}
+
+.section-head p{
+max-width:420px;
+color:var(--muted);
+line-height:1.8;
+}
+
+.services{
+background:#0e0c0b;
+}
+
+.service-group{
+margin-bottom:65px;
+}
+
+.service-group:last-child{
+margin-bottom:0;
+}
+
+.service-title{
+display:flex;
+align-items:center;
+gap:15px;
+margin-bottom:20px;
+}
+
+.service-title h3{
+font-family:"Playfair Display",serif;
+font-size:34px;
+font-weight:500;
+}
+
+.service-title .line{
+height:1px;
+background:var(--line);
+flex:1;
+}
+
+.service-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:12px;
+}
+
+.service-card{
+background:var(--panel);
+border:1px solid var(--line);
+padding:24px;
+min-height:155px;
+transition:.35s;
+}
+
+.service-card:hover{
+transform:translateY(-5px);
+border-color:rgba(216,174,114,.5);
+background:var(--panel2);
+}
+
+.service-card h4{
+font-family:"Playfair Display",serif;
+font-size:21px;
+font-weight:500;
+margin:20px 0 28px;
+}
+
+.price{
+color:var(--gold);
+font-weight:600;
+font-size:15px;
+}
+
+.about{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:70px;
+align-items:center;
+}
+
+.about-img{
+height:540px;
+
+background:
+url("https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&w=1100&q=85")
+center/cover;
+}
+
+.about-copy h2{
+font-family:"Playfair Display",serif;
+font-size:clamp(45px,5vw,72px);
+line-height:1;
+font-weight:500;
+margin-top:12px;
+}
+
+.about-copy h2 span{
+color:var(--gold);
+}
+
+.about-copy p{
+color:var(--muted);
+line-height:1.85;
+margin:25px 0;
+}
+
+.stats{
+display:flex;
+gap:35px;
+margin:30px 0;
+}
+
+.stats strong{
+display:block;
+font-family:"Playfair Display",serif;
+font-size:34px;
+}
+
+.stats small{
+color:var(--muted);
+font-size:11px;
+}
+
+.booking{
+background:
+linear-gradient(135deg,#17130f,#0c0b0a);
+}
+
+.booking-wrap{
+max-width:900px;
+margin:auto;
+}
+
+.form{
+border:1px solid var(--line);
+background:rgba(255,255,255,.025);
+padding:35px;
+}
+
+.form-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:18px;
+}
+
+.field{
+display:flex;
+flex-direction:column;
+gap:8px;
+}
+
+.field.full{
+grid-column:1/-1;
+}
+
+.field label{
+font-size:11px;
+color:var(--gold);
+letter-spacing:1.5px;
+text-transform:uppercase;
+}
+
+.field input,
+.field select,
+.field textarea{
+width:100%;
+background:#0d0b09;
+border:1px solid var(--line);
+color:var(--cream);
+padding:14px;
+border-radius:4px;
+font:inherit;
+outline:none;
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus{
+border-color:var(--gold);
+}
+
+.field textarea{
+min-height:110px;
+resize:vertical;
+}
+
+.form button{
+margin-top:22px;
+width:100%;
+cursor:pointer;
+background:var(--gold);
+color:#17110b;
+border:0;
+font-weight:700;
+padding:15px;
+border-radius:4px;
+}
+
+.note{
+color:var(--muted);
+font-size:12px;
+margin-top:12px;
+text-align:center;
+}
+
+.contact{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:60px;
+background:#0d0b0a;
+}
+
+.contact h2{
+font-family:"Playfair Display",serif;
+font-size:60px;
+font-weight:500;
+}
+
+.details{
+display:grid;
+gap:22px;
+}
+
+.detail span{
+display:block;
+color:var(--gold);
+font-size:10px;
+letter-spacing:2px;
+text-transform:uppercase;
+margin-bottom:5px;
+}
+
+.detail{
+color:var(--muted);
+font-size:14px;
+line-height:1.7;
+}
+
+.detail a:hover{
+color:var(--gold);
+}
+
+.map-link{
+display:inline-flex;
+margin-top:8px;
+color:var(--gold);
+font-size:12px;
+letter-spacing:.5px;
+}
+
+.map-link:hover{
+text-decoration:underline;
+}
+
+.footer{
+border-top:1px solid var(--line);
+padding:25px 7%;
+display:flex;
+justify-content:space-between;
+color:#807568;
+font-size:11px;
+}
+
+@media(max-width:850px){
+
+.navlinks{
+display:none;
+}
+
+.service-grid{
+grid-template-columns:1fr 1fr;
+}
+
+.about,
+.contact{
+grid-template-columns:1fr;
+}
+
+.about-img{
+height:400px;
+}
+
+.section-head{
+display:block;
+}
+
+.section-head p{
+margin-top:15px;
+}
+
+.form-grid{
+grid-template-columns:1fr;
+}
+
+.field.full{
+grid-column:auto;
+}
+
+.hero h1{
+font-size:65px;
+}
+
+}
+
+@media(max-width:500px){
+
+section{
+padding:80px 5%;
+}
+
+.hero{
+padding-left:5%;
+padding-right:5%;
+}
+
+.service-grid{
+grid-template-columns:1fr;
+}
+
+.stats{
+gap:18px;
+}
+
+.form{
+padding:22px;
+}
+
+.contact h2{
+font-size:48px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<nav class="nav">
+
+<a class="logo" href="#">
+VE<span>A</span>URA
+</a>
+
+<div class="navlinks">
+<a href="#services">Services</a>
+<a href="#about">About</a>
+<a href="#booking">Appointment</a>
+<a href="#contact">Contact</a>
+</div>
+
+<a class="btn" href="#booking">
+Book Now
+</a>
+
+</nav>
+
+
+<header class="hero">
+
+<div class="hero-inner">
+
+<div class="eyebrow">
+Unisex Salon · Hair · Beauty · Grooming
+</div>
+
+<h1>
+Own Your<br>
+<em>Look.</em>
+</h1>
+
+<p>
+A premium salon experience designed around your style.
+Professional hair, beauty and grooming services at VEAURA.
+</p>
+
+<div class="actions">
+
+<a class="btn" href="#booking">
+Book Appointment
+</a>
+
+<a class="btn" href="#services">
+View Services
+</a>
+
+</div>
+
+</div>
+
+<div class="scroll">
+SCROLL ↓
+</div>
+
+</header>
+
+
+<section class="services" id="services">
+
+<div class="section-head">
+
+<div>
+
+<div class="kicker">
+Our Menu
+</div>
+
+<h2>
+Premium Services
+</h2>
+
+</div>
+
+<p>
+Transparent pricing and carefully selected services
+for men and women.
+</p>
+
+</div>
+
+
+<!-- MEN -->
+
+<div class="service-group">
+
+<div class="service-title">
+
+<h3>
+Men's Services
+</h3>
+
+<div class="line"></div>
+
+</div>
+
+
+<div class="service-grid">
+
+
+<div class="service-card">
+<small>01 / HAIR</small>
+<h4>Hair Cut</h4>
+<div class="price">₹150</div>
+</div>
+
+
+<div class="service-card">
+<small>02 / GROOMING</small>
+<h4>Beard</h4>
+<div class="price">₹100</div>
+</div>
+
+
+<div class="service-card">
+<small>03 / COLOR</small>
+<h4>L'Oréal Hair Color</h4>
+<div class="price">₹450</div>
+</div>
+
+
+<div class="service-card">
+<small>04 / COLOR</small>
+<h4>SKP Hair Color</h4>
+<div class="price">₹600</div>
+</div>
+
+
+<div class="service-card">
+<small>05 / SKIN</small>
+<h4>D-Tan</h4>
+<div class="price">₹400</div>
+</div>
+
+
+<div class="service-card">
+<small>06 / SKIN</small>
+<h4>Cleanup</h4>
+<div class="price">₹700</div>
+</div>
+
+
+<div class="service-card">
+<small>07 / FACIAL</small>
+<h4>Facial</h4>
+<div class="price">₹1,200 starting</div>
+</div>
+
+
+<div class="service-card">
+<small>08 / CARE</small>
+<h4>Hair Spa</h4>
+<div class="price">₹500</div>
+</div>
+
+</div>
+
+</div>
+
+
+<!-- WOMEN -->
+
+<div class="service-group">
+
+<div class="service-title">
+
+<h3>
+Women's Services
+</h3>
+
+<div class="line"></div>
+
+</div>
+
+
+<div class="service-grid">
+
+
+<div class="service-card">
+<small>01 / HAIR</small>
+<h4>Haircut</h4>
+<div class="price">₹500</div>
+</div>
+
+
+<div class="service-card">
+<small>02 / CARE</small>
+<h4>L'Oréal Spa</h4>
+<div class="price">₹1,000</div>
+</div>
+
+
+<div class="service-card">
+<small>03 / CARE</small>
+<h4>Premium Spa</h4>
+<div class="price">₹1,500</div>
+</div>
+
+
+<div class="service-card">
+<small>04 / COLOR</small>
+<h4>Global Hair Color</h4>
+<div class="price">₹2,000 starting</div>
+</div>
+
+
+<div class="service-card">
+<small>05 / COLOR</small>
+<h4>Highlights</h4>
+<div class="price">₹2,500 starting</div>
+</div>
+
+
+<div class="service-card">
+<small>06 / HAIR</small>
+<h4>Hair Wash</h4>
+<div class="price">₹250</div>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="about" id="about">
+
+<div class="about-img"></div>
+
+<div class="about-copy">
+
+<div class="kicker">
+The VEAURA Experience
+</div>
+
+<h2>
+Style that feels<br>
+<span>like you.</span>
+</h2>
+
+<p>
+At VEAURA, every appointment is a moment to reset,
+refresh and express yourself. Our team combines
+contemporary techniques with a personal approach.
+</p>
+
+<div class="stats">
+
+<div>
+<strong>8+</strong>
+<small>Years Experience</small>
+</div>
+
+<div>
+<strong>5K+</strong>
+<small>Happy Clients</small>
+</div>
+
+<div>
+<strong>20+</strong>
+<small>Services</small>
+</div>
+
+</div>
+
+<a class="btn" href="#booking">
+Plan Your Visit
+</a>
+
+</div>
+
+</section>
+
+
+<section class="booking" id="booking">
+
+<div class="booking-wrap">
+
+<div class="section-head">
+
+<div>
+
+<div class="kicker">
+Appointments
+</div>
+
+<h2>
+Reserve Your Time
+</h2>
+
+</div>
+
+<p>
+Select your service, preferred date and time.
+Your booking request will open directly in WhatsApp.
+</p>
+
+</div>
+
+
+<form class="form" id="bookingForm">
+
+<div class="form-grid">
+
+
+<div class="field">
+
+<label>
+Full Name
+</label>
+
+<input
+id="name"
+type="text"
+placeholder="Enter your name"
+required
+>
+
+</div>
+
+
+<div class="field">
+
+<label>
+Mobile Number
+</label>
+
+<input
+id="phone"
+type="tel"
+placeholder="Enter mobile number"
+required
+>
+
+</div>
+
+
+<div class="field">
+
+<label>
+Category
+</label>
+
+<select id="category" required>
+
+<option value="">
+Select category
+</option>
+
+<option value="Men">
+Men
+</option>
+
+<option value="Women">
+Women
+</option>
+
+</select>
+
+</div>
+
+
+<div class="field">
+
+<label>
+Service
+</label>
+
+<select id="service" required>
+
+<option value="">
+Select service
+</option>
+
+</select>
+
+</div>
+
+
+<div class="field">
+
+<label>
+Appointment Date
+</label>
+
+<input
+id="date"
+type="date"
+required
+>
+
+</div>
+
+
+<div class="field">
+
+<label>
+Preferred Time
+</label>
+
+<input
+id="time"
+type="time"
+required
+>
+
+</div>
+
+
+<div class="field full">
+
+<label>
+Message
+</label>
+
+<textarea
+id="message"
+placeholder="Any special request?"
+></textarea>
+
+</div>
+
+
+</div>
+
+
+<button type="submit">
+BOOK APPOINTMENT VIA WHATSAPP ↗
+</button>
+
+
+<div class="note">
+Your name, service, date and time will be sent to VEAURA on WhatsApp.
+</div>
+
+</form>
+
+</div>
+
+</section>
+
+
+<section class="contact" id="contact">
+
+<div>
+
+<div class="kicker">
+Contact
+</div>
+
+<h2>
+Let's create<br>
+your look.
+</h2>
+
+</div>
+
+
+<div class="details">
+
+<div class="detail">
+
+<span>
+Call / WhatsApp
+</span>
+
+<a
+href="https://wa.me/919054438481"
+target="_blank"
+rel="noopener"
+>
++91 90544 38481
+</a>
+
+</div>
+
+
+<div class="detail">
+
+<span>
+Address
+</span>
+
+Shop No. 109, KBC 1,<br>
+Opposite Abhishek Arcade,<br>
+Kiran Chowk, Surat, Gujarat
+
+<br>
+
+<a
+class="map-link"
+href="https://www.google.com/maps/search/?api=1&query=Shop+109+KBC+1+Opposite+Abhishek+Arcade+Kiran+Chowk+Surat+Gujarat"
+target="_blank"
+rel="noopener"
+>
+📍 Open Location in Google Maps ↗
+</a>
+
+</div>
+
+
+<div class="detail">
+
+<span>
+Opening Hours
+</span>
+
+Mon – Sun · 10:00 AM – 9:00 PM
+
+</div>
+
+
+<div>
+
+<a
+class="btn"
+href="https://wa.me/919054438481"
+target="_blank"
+rel="noopener"
+>
+WhatsApp Us ↗
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<footer class="footer">
+
+<span>
+© 2026 VEAURA Unisex Salon
+</span>
+
+<span>
+Premium Hair · Beauty · Grooming
+</span>
+
+</footer>
+
+
+<script>
+
+/* =========================
+   SERVICES
+========================= */
+
+const services = {
+
+Men: [
+
+"Hair Cut — ₹150",
+
+"Beard — ₹100",
+
+"L'Oréal Hair Color — ₹450",
+
+"SKP Hair Color — ₹600",
+
+"D-Tan — ₹400",
+
+"Cleanup — ₹700",
+
+"Facial — ₹1,200 starting",
+
+"Hair Spa — ₹500"
+
+],
+
+Women: [
+
+"Haircut — ₹500",
+
+"L'Oréal Spa — ₹1,000",
+
+"Premium Spa — ₹1,500",
+
+"Global Hair Color — ₹2,000 starting",
+
+"Highlights — ₹2,500 starting",
+
+"Hair Wash — ₹250"
+
+]
+
+};
+
+
+/* =========================
+   CATEGORY → SERVICE
+========================= */
+
+const category =
+document.getElementById("category");
+
+const service =
+document.getElementById("service");
+
+
+category.addEventListener("change", function(){
+
+service.innerHTML =
+'<option value="">Select service</option>';
+
+const selected =
+services[this.value] || [];
+
+selected.forEach(function(item){
+
+const option =
+document.createElement("option");
+
+option.value = item;
+
+option.textContent = item;
+
+service.appendChild(option);
+
+});
+
+});
+
+
+/* =========================
+   DATE
+========================= */
+
+const date =
+document.getElementById("date");
+
+const today =
+new Date().toISOString().split("T")[0];
+
+date.min = today;
+
+
+/* =========================
+   WHATSAPP APPOINTMENT
+========================= */
+
+document
+.getElementById("bookingForm")
+.addEventListener("submit", function(event){
+
+event.preventDefault();
+
+
+/*
+VEAURA WHATSAPP NUMBER
++91 90544 38481
+*/
+
+const salonWhatsApp =
+"919054438481";
+
+
+const customerName =
+document.getElementById("name").value.trim();
+
+const customerPhone =
+document.getElementById("phone").value.trim();
+
+const categoryValue =
+document.getElementById("category").value;
+
+const serviceValue =
+document.getElementById("service").value;
+
+const appointmentDate =
+document.getElementById("date").value;
+
+const appointmentTime =
+document.getElementById("time").value;
+
+const message =
+document.getElementById("message").value.trim() ||
+"None";
+
+
+const whatsappMessage =
+
+`Hello VEAURA Unisex Salon,
+
+I would like to book an appointment.
+
+Name: ${customerName}
+
+Mobile: ${customerPhone}
+
+Category: ${categoryValue}
+
+Service: ${serviceValue}
+
+Date: ${appointmentDate}
+
+Time: ${appointmentTime}
+
+Message: ${message}`;
+
+
+const whatsappURL =
+"https://wa.me/" +
+salonWhatsApp +
+"?text=" +
+encodeURIComponent(whatsappMessage);
+
+
+window.open(
+whatsappURL,
+"_blank"
+);
+
+});
+
+</script>
+
+</body>
+</html>
